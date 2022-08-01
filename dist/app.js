@@ -12,6 +12,7 @@ console.log(a);
 // array
 let numberArray = [1, 2, 3, 4];
 let stringArray = ["a", "b", "c"];
+//tuple array
 let tupleArray = [1, "hello", false];
 let anyArray = [1, "s", 1, 2, 3, 4, 231, false, "hey"];
 let twoValue = 2;
@@ -39,3 +40,13 @@ function addNum(a, b) {
     return a + b;
 }
 addNum(10, 20);
+//function using void
+function addNum2(a) {
+    console.log(a);
+}
+addNum2("hh");
+const user2 = {
+    id: 1,
+    name: "hardik",
+    age: 29 //here age is optionals.
+};
