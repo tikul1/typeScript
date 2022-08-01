@@ -48,5 +48,8 @@ addNum2("hh");
 const user2 = {
     id: 1,
     name: "hardik",
-    age: 29 //here age is optionals.
+    age: 29,
+    sayHello: () => { return "hello"; }
 };
+console.log(user2);
+console.log(user2.sayHello());

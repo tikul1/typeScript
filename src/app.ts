@@ -73,10 +73,17 @@ interface userInterface  {
     readonly id: number,         //readonly so it cant be changed. e.g: used for unique id
     name: string,
     age? : number                   // ? is used for optional value
+    sayHello : () => string 
 }
 
 const user2: userInterface = {
     id: 1,
     name: "hardik",
-    age:29                                  //here age is optionals.
+    age:29 ,                                 //here age is optionals.
+    sayHello: ():string => {return "hello"}
+
 }
+
+console.log(user2);
+console.log(user2.sayHello());
+
