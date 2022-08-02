@@ -1,5 +1,8 @@
 "use strict";
 console.log("hello");
+//type assertion
+let x = 1;
+let y = 3;
 //normal variables 
 const data1 = "Tikul Parmar";
 console.log(data1);
@@ -13,7 +16,7 @@ console.log(a);
 let numberArray = [1, 2, 3, 4];
 let stringArray = ["a", "b", "c"];
 //tuple array
-let tupleArray = [1, "hello", false];
+let tupleArray = [1, "hello", false,];
 let anyArray = [1, "s", 1, 2, 3, 4, 231, false, "hey"];
 let twoValue = 2;
 var xyz;
@@ -40,11 +43,30 @@ function addNum(a, b) {
     return a + b;
 }
 addNum(10, 20);
+//function some will be converted to normal function. and it will accept string or array.
+function some(name) {
+    if (typeof name === "string") {
+        console.log(name);
+    }
+    else {
+        var i;
+        for (i = 0; i < name.length; i++) {
+            console.log(name[i]);
+        }
+    }
+}
+some("abcedfghi");
+some(["z", "y", "x", "w"]);
+//union type and array
+let arr;
+let i;
+arr = [1, 2, 3, 4];
+arr = ["a", "b", "c"];
 //function using void
 function addNum2(a) {
     console.log(a);
 }
-addNum2("hh");
+addNum2("hdash");
 const user2 = {
     id: 1,
     name: "hardik",
@@ -53,3 +75,22 @@ const user2 = {
 };
 console.log(user2);
 console.log(user2.sayHello());
+// let newOption:diffOptions = {option1: "tikulllll", option2: "parmarrr"}
+// let newOption:diffOptions = {option1: "tikulllll", option2: ["parmarrr","a","b","c"]}
+let newOption = { option1: "tikulllll", option2: () => { return "~~~~~~~~~~~~~~~~"; } };
+let hardik = {
+    [1]: "rollNum",
+    name: "hardik"
+};
+//class 
+class product {
+    constructor(pName) {
+        this.pName = pName;
+    }
+    func() {
+        console.log("product: " + this.pName);
+    }
+}
+let productObj = new product("mobile");
+console.log("product name: " + productObj.pName);
+productObj.func();

@@ -1,0 +1,38 @@
+1) Adding type: module
+2) Changing name to .mjs
+3) By installing esm dependency
+Common js .cjs   ( only common required used and modules.exports) 
+Normal .js  (type: module) (it will allow using import/export)
+Es6 module js .mjs  (no need to add type : module)
+
+
+
+ESM - we can split our code into diffrent files when our code base grows . we can organize and reuse our code base
+	in a more structured manner. and it will be easilty accesible.
+cjs - it is resolved in runtime. so we can put it anywhere in our code.
+
+pros => ESM is a more secure than CJS. ESM syntax cannot be replaced. while in CJS both module-exports can be replaced.
+	it is a module system built for encapsulating JS code for reuse
+	fat arrow function
+	classes
+	export/import (modules) 
+	let and const (block scoping)
+	for/for of loop
+	prmoises
+	=> write less codes (shorter than traditional js)
+	=> diffrent ways to complete same tasks.
+	=> it helps in selective loading  the pieces of code which are required that helps in saving memory
+	=> require loading is synchronus whereas import can be asynchronus so it performs better compared to required.
+
+cons =>  confusion about best coding practice, 
+	ESM imports are static. it is executed first (during parse time) it has to be on top of the code.
+				(dynamic import if want to use it in runtime)
+	
+
+
+    "start": "babel-node app.js",
+    "dev": "nodemon --exec npm start"
+
+	    "start": "nodemon --exec ./node_modules/.bin/babel-node app.js"
+
+typeScript = allows users to add types.
